@@ -63,7 +63,7 @@ copyBtn.addEventListener("click", () => {
   navigator.clipboard.writeText(text).then(() => {
     setTimeout(() => {
       svg.setAttribute("stroke", "#a4ffaf");
-    }, 1000);
+    }, 500);
   });
 });
 
@@ -94,7 +94,7 @@ function updateStrength() {
   const strengthLevels = ["", "Very Low", "Low", "Medium", "Strong"];
   strengthLabel.textContent = strengthLevels[selectedCount];
   for (let i = 0; i < selectedCount; i++) {
-    bars[i].style.backgroundColor = "yellow";
+    bars[i].style.backgroundColor = "#f5ce6a";
     bars[i].style.border = "none";
   }
 }

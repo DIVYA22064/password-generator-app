@@ -62,11 +62,6 @@ body {
   cursor: pointer;
 }
 
-.copy-btn img {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
 .generator-form {
   background-color: var(--input-bg);
   padding: 1.5rem;
@@ -74,7 +69,7 @@ body {
 }
 
 .form-control {
-  margin: 0.5rem 0;
+  margin: 0.625rem 0;
 }
 
 .range-control {
@@ -86,6 +81,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 #lengthValue {
@@ -157,16 +153,17 @@ input[type="checkbox"]:hover {
   color: white;
   text-transform: uppercase;
   margin-right: 1rem;
+  font-size: 0.9rem;
 }
 
 .strength-indicator {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.3rem;
 }
 
 .strength-indicator .bar {
-  width: 10px;
-  height: 24px;
+  width: 0.5rem;
+  height: 1.5rem;
   border: 1px solid white;
   background-color: transparent;
 }
@@ -179,18 +176,30 @@ input[type="checkbox"]:hover {
   color: var(--bg);
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.generate-btn:hover,
-.generate-btn:focus {
+.generate-btn:active {
   background-color: var(--bg);
   color: var(--neon);
   border: 2px solid var(--neon);
 }
-
 @media (max-width: 768px) {
   .container {
     max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .strength-box span.label,
+  .strength-value {
+    font-size: 0.8rem;
+  }
+  .strength-value {
+    margin-right: 0.45rem;
   }
 }
